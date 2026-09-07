@@ -1,0 +1,291 @@
+{
+  "base": "https://flanker.github.io/ag-grid-rendering-lab/",
+  "checkedAt": "2026-09-07T15:24:02.711Z",
+  "modes": [
+    {
+      "mode": "react",
+      "meta": {
+        "config": {
+          "mode": "react",
+          "preset": "rich",
+          "rows": 500,
+          "columns": 60,
+          "seed": 16692
+        },
+        "hash": "fde854ae",
+        "versions": {
+          "react": "19.2.1",
+          "reactDom": "19.2.1",
+          "agGrid": "36.0.2"
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+        "viewport": {
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "build": "2f1cda4",
+        "renderPath": {
+          "rows": 18,
+          "reactRows": 18,
+          "nativeRows": 0,
+          "cells": 198,
+          "reactCells": 198,
+          "reactContents": 198
+        }
+      },
+      "errors": [],
+      "distribution": {
+        "names": 8,
+        "statuses": 4,
+        "booleans": 2,
+        "thumbnailPalettes": 4
+      },
+      "lifecycleRuns": [
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        }
+      ]
+    },
+    {
+      "mode": "dom-cells",
+      "meta": {
+        "config": {
+          "mode": "dom-cells",
+          "preset": "rich",
+          "rows": 500,
+          "columns": 60,
+          "seed": 16692
+        },
+        "hash": "fde854ae",
+        "versions": {
+          "react": "19.2.1",
+          "reactDom": "19.2.1",
+          "agGrid": "36.0.2"
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+        "viewport": {
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "build": "2f1cda4",
+        "renderPath": {
+          "rows": 18,
+          "reactRows": 18,
+          "nativeRows": 0,
+          "cells": 198,
+          "reactCells": 198,
+          "reactContents": 0
+        }
+      },
+      "errors": [],
+      "distribution": {
+        "names": 8,
+        "statuses": 4,
+        "booleans": 2,
+        "thumbnailPalettes": 4
+      },
+      "lifecycleRuns": [
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 0,
+            "destroyed": 0
+          },
+          "after": {
+            "created": 0,
+            "destroyed": 0,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        }
+      ]
+    },
+    {
+      "mode": "dom-rows",
+      "meta": {
+        "config": {
+          "mode": "dom-rows",
+          "preset": "rich",
+          "rows": 500,
+          "columns": 60,
+          "seed": 16692
+        },
+        "hash": "fde854ae",
+        "versions": {
+          "react": "19.2.1",
+          "reactDom": "19.2.1",
+          "agGrid": "36.0.2"
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+        "viewport": {
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "build": "2f1cda4",
+        "renderPath": {
+          "rows": 18,
+          "reactRows": 0,
+          "nativeRows": 18,
+          "cells": 198,
+          "reactCells": 0,
+          "reactContents": 0
+        }
+      },
+      "errors": [],
+      "distribution": {
+        "names": 8,
+        "statuses": 4,
+        "booleans": 2,
+        "thumbnailPalettes": 4
+      },
+      "lifecycleRuns": [
+        {
+          "before": {
+            "created": 186,
+            "destroyed": 168
+          },
+          "after": {
+            "created": 204,
+            "destroyed": 186,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 204,
+            "destroyed": 186
+          },
+          "after": {
+            "created": 222,
+            "destroyed": 204,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        },
+        {
+          "before": {
+            "created": 222,
+            "destroyed": 204
+          },
+          "after": {
+            "created": 240,
+            "destroyed": 222,
+            "oldRowsDisconnected": true,
+            "rowCount": 18
+          }
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    "react: initial content matches expected data and other modes",
+    "react: after vertical wheel content matches expected data and other modes",
+    "react: after horizontal wheel content matches expected data and other modes",
+    "react: initial content matches expected data and other modes",
+    "react: initial content matches expected data and other modes",
+    "react: initial content matches expected data and other modes",
+    "react: initial content matches expected data and other modes",
+    "react: after data update content matches expected data and other modes",
+    "react: after sort content matches expected data and other modes",
+    "react: after resize and pin content matches expected data and other modes",
+    "react: initial content matches expected data and other modes",
+    "react: preset rating content matches expected data and other modes",
+    "react: preset attachments content matches expected data and other modes",
+    "react: preset tags content matches expected data and other modes",
+    "react: preset plain content matches expected data and other modes",
+    "react: stress rich content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: after vertical wheel content matches expected data and other modes",
+    "dom-cells: after horizontal wheel content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: after data update content matches expected data and other modes",
+    "dom-cells: after sort content matches expected data and other modes",
+    "dom-cells: after resize and pin content matches expected data and other modes",
+    "dom-cells: initial content matches expected data and other modes",
+    "dom-cells: preset rating content matches expected data and other modes",
+    "dom-cells: preset attachments content matches expected data and other modes",
+    "dom-cells: preset tags content matches expected data and other modes",
+    "dom-cells: preset plain content matches expected data and other modes",
+    "dom-cells: stress rich content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: after vertical wheel content matches expected data and other modes",
+    "dom-rows: after horizontal wheel content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: after data update content matches expected data and other modes",
+    "dom-rows: after sort content matches expected data and other modes",
+    "dom-rows: after resize and pin content matches expected data and other modes",
+    "dom-rows: initial content matches expected data and other modes",
+    "dom-rows: preset rating content matches expected data and other modes",
+    "dom-rows: preset attachments content matches expected data and other modes",
+    "dom-rows: preset tags content matches expected data and other modes",
+    "dom-rows: preset plain content matches expected data and other modes",
+    "dom-rows: stress rich content matches expected data and other modes"
+  ],
+  "pass": true
+}

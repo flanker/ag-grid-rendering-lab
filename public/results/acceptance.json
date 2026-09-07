@@ -1,13 +1,16 @@
 {
-  "status": "local-accepted-pending-live",
+  "status": "accepted",
   "localExperimentPassed": true,
   "measurementReviewScore": 8.9,
   "publicationProcessReviewScore": 8.8,
-  "livePassed": false,
-  "finalScore": null,
+  "livePassed": true,
+  "finalScore": 9.0,
+  "reviewedOn": "2026-09-07",
+  "servedRendererBuildRevision": "2f1cda4",
   "testedSourceSha256": "6a9d3993a84cac0d1cb6363ec9857790a5ec12ffd857079b8430a4df3f907f0a",
-  "headline": "本地实验通过 · 线上验收待完成",
+  "headline": "线上验收通过 · 9.0 / 10",
   "conclusion": "已复现 CPU 压力下的滚动延迟与空白。B 没有稳定改善；C 相比 B 在部分场景改善，但相比 A 收益不稳定，4× / 6× 快速滚动仍会空白。",
-  "details": "独立 critical agent：本地测量产出 8.9/10，发布流程 8.8/10。已通过 48 项可见内容断言及渲染路径、生命周期等功能检查；完成 150 次主测试、45 次探索测试、9 组画面诊断和 7 种校准。线上验收尚未完成。评分评价实验与交付可信度，不代表性能问题已被修复。",
+  "details": "独立 critical agent 最终评分 9.0/10，通过。GitHub Pages 三页直达、刷新、切换、手动记录与 JSON 导出均通过；线上 48 项可见内容断言、渲染路径和生命周期等检查通过，无浏览器错误。报告实际数值、图片、6 份关键证据摘要及被测源码一致性已核对。完成 150 次主测试、45 次探索测试、9 组画面诊断与 7 种校准。评分评价实验与交付可信度，不代表性能问题已被修复。",
+  "liveEvidence": "results/live/result.json and results/live-check/result.json record successful live checks before this final review status was written. Their embedded acceptance snapshot intentionally preserves that earlier stage. Final publication changes only report/evidence, retaining the identical renderer build.",
   "scope": "Synthetic Community display experiment; CPU throttling is not real low-end hardware certification. Custom editors, full-width/spanned rows and Enterprise features are excluded."
 }

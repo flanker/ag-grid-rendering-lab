@@ -58,6 +58,8 @@ There are **no** scheduler changes, directional buffers, extra lookahead, skelet
 
 See the [published report](https://flanker.github.io/ag-grid-rendering-lab/report.html), [experiment protocol](EXPERIMENT.md), and [critical reviews](REVIEWS.md). Raw results are linked from the report. Preliminary single runs are not used as proof of improvement.
 
+Final independent acceptance: **9.0/10**, including deployed functionality and evidence identity. CPU-pressure scrolling problems were reproduced; B did not consistently improve over A, and C did not eliminate blank content. See [measured results](RESULTS.md) for the limits of the comparison.
+
 This tests synthetic renderers on Community, not a complete business application or enterprise configuration. CPU throttling simulates CPU pressure on this host and browser; it does not certify a real low-end device. Equivalent visual output does not imply identical construction: A creates React elements, B/C parse escaped HTML. Report implementation differences, noise, regressions and inconclusive outcomes honestly.
 
 ## Publish to GitHub Pages
