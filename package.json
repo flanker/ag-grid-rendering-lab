@@ -9,7 +9,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4173",
     "check": "node scripts/check.mjs",
-    "bench": "node scripts/bench.mjs"
+    "bench": "node scripts/bench.mjs",
+    "publish:pages": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "ag-grid-community": "36.0.2",

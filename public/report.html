@@ -10,6 +10,7 @@
 <details><summary>查看每个区组的配对差值（ms）</summary><pre id="paired"></pre></details>
 <h2>独立画面诊断</h2><p>受控快速 wheel 手势：9000 px/s，13500 px，关闭额外惯性。单独采集合成器截图，统计命令执行窗口内的画面样本。此处为每条件一次诊断，不能作为多次配对性能统计。</p><div class="table-wrap"><table><thead><tr><th>CPU</th><th>页面</th><th>大面积空白样本 / 活跃样本</th><th>最终可见内容</th></tr></thead><tbody id="visual"></tbody></table></div><div class="evidence" id="evidence"></div><p class="note">检测器先用正常丰富字段、稀疏文本、隐藏内容、错误文本、缺失节点、隐藏祖先和移出视口校准。骨架不算正确内容。截图不是每一个显示帧；首次观测即完整也不意味着恢复耗时为零。</p>
 <h2>验收与可复现性</h2><p id="acceptance">验收记录加载中。</p><p id="environment"></p><p id="fingerprint" class="note"></p><div class="links"><a href="./results/primary/raw.json">主测试原始记录 JSON ↓</a><a href="./results/primary/summary.json">汇总与配对差值 ↓</a><a href="./results/cpu6/raw.json">6× 探索记录 ↓</a><a href="./results/visual/result.json">画面诊断与校准 ↓</a><a href="./build-manifest.json">构建清单 ↓</a></div>
+<div class="links"><a href="./results/acceptance.json">独立验收记录 ↓</a><a href="./results/verification.json">证据文件摘要 ↓</a><a href="./results/check/result.json">功能检查明细 ↓</a></div>
 <details><summary>本地复现命令</summary><pre>pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
 pnpm build
@@ -19,7 +20,7 @@ pnpm preview
 pnpm check
 pnpm bench --cpu=1,4 --repeat=5 --out=artifacts/primary
 pnpm bench --cpu=6 --repeat=3 --out=artifacts/cpu6
-node scripts/visual.mjs</pre></details>
+VISUAL_OUT=artifacts/visual-published node scripts/visual.mjs</pre></details>
 <h2>结论边界</h2><p>这是独立合成 renderer 与 Community 模块的实验，并非完整业务应用的复刻。HTML 字符串解析与 React 元素构建本身存在差异。CPU 降速模拟不等于真实低端设备认证；原生内部接口也不等于官方支持的开关。没有明确改善或出现退化时，同样如实报告。</p><p>已验证范围包括显示、纵横滚动、排序、列宽、固定列、数据更新与同页面重建。自定义编辑器、Enterprise 功能、行合并和全宽行不在本次通过范围内。</p><footer><a href="https://github.com/flanker/ag-grid-rendering-lab/blob/main/EXPERIMENT.md">完整协议</a> · <a href="https://github.com/flanker/ag-grid-rendering-lab/blob/main/REVIEWS.md">逐轮 critical review</a> · <a href="./THIRD_PARTY_NOTICES.txt">开源声明</a></footer>
 <script type="module">
 const modes=['react','dom-cells','dom-rows'], labels={react:'A','dom-cells':'B','dom-rows':'C'};
@@ -27,10 +28,12 @@ const load=async path=>{const response=await fetch(path);if(!response.ok)throw n
 const cell=(tr,text,cls)=>{const td=document.createElement('td');td.textContent=text;if(cls)td.className=cls;tr.append(td)};
 try{
  const [summary, visual, acceptance, raw]=await Promise.all([load('./results/primary/summary.json'),load('./results/visual/result.json'),load('./results/acceptance.json'),load('./results/primary/raw.json')]);
+ if(raw.runs.length!==150||!raw.finishedAt||raw.manifest.sourceSha256!==acceptance.testedSourceSha256||!visual.pass||visual.runs.length!==9)throw new Error('Evidence identity or completeness mismatch');
+ for(const cpu of [1,4])for(const scenario of ['read','wheel','fling','fling-stop','hscroll'])for(const mode of modes){const rows=summary.summary.filter(r=>r.cpu===cpu&&r.scenario===scenario&&r.mode===mode);if(rows.length!==1||rows[0].n!==5||![rows[0].p95Median,rows[0].p95Min,rows[0].p95Max].every(Number.isFinite))throw new Error('Incomplete timing summary')}
  document.querySelector('#outcome').textContent=acceptance.headline;
  document.querySelector('#conclusion').textContent=acceptance.conclusion;
  for(const cpu of [1,4])for(const scenario of ['read','wheel','fling','fling-stop','hscroll']){const tr=document.createElement('tr');cell(tr,cpu+'×');cell(tr,scenario);for(const mode of modes){const r=summary.summary.find(r=>r.cpu===cpu&&r.scenario===scenario&&r.mode===mode);cell(tr,r?`${r.p95Median.toFixed(1)} (${r.p95Min.toFixed(1)}–${r.p95Max.toFixed(1)})`:'—','num')}document.querySelector('#timing').append(tr)}
- document.querySelector('#paired').textContent=summary.paired.map(p=>`${p.cpu}× ${p.scenario}\n  B−A: ${p.comparisons.map(c=>c.domCellsMinusReactMs.toFixed(1)).join(', ')}\n  C−B: ${p.comparisons.map(c=>c.domRowsMinusDomCellsMs.toFixed(1)).join(', ')}`).join('\n\n');
+ document.querySelector('#paired').textContent=summary.paired.map(p=>`${p.cpu}× ${p.scenario}\n  B−A: ${p.comparisons.map(c=>c.domCellsMinusReactMs.toFixed(1)).join(', ')}\n  C−B: ${p.comparisons.map(c=>c.domRowsMinusDomCellsMs.toFixed(1)).join(', ')}\n  C−A: ${p.comparisons.map(c=>c.domRowsMinusReactMs.toFixed(1)).join(', ')}`).join('\n\n');
  for(const r of visual.runs){const tr=document.createElement('tr');cell(tr,r.cpu+'×');cell(tr,labels[r.mode]);cell(tr,`${r.blankSamples} / ${r.sampledImages}`,'num');cell(tr,r.coverage.at(-1).complete?'内容完整':'存在缺项');document.querySelector('#visual').append(tr);if(r.cpu===4){const filename=r.images.find(name=>name.includes('blank'))||r.images.find(name=>name.includes('worst'));if(filename){const a=document.createElement('a');a.href='./results/visual/'+filename;const img=document.createElement('img');img.src=a.href;img.alt=`${labels[r.mode]} 4× 快速滚动画面样本`;const caption=document.createElement('span');caption.textContent=img.alt+' ↗';a.append(img,caption);document.querySelector('#evidence').append(a)}}}
  document.querySelector('#acceptance').textContent=acceptance.details;
  document.querySelector('#environment').textContent=`主测试：${raw.environment.cpu} · ${raw.environment.os} ${raw.environment.arch} · Chromium ${raw.browserVersion} · 1440×1000 / DPR 1。${raw.runs.length} 次滚动观察，运行于本地 production build。`;

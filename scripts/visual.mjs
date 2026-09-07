@@ -119,9 +119,8 @@ try {
     for (const mode of MODES) {
       const { page, cdp, rect, errors } = await openPage(browser, {
         base,
-      mode,
-      cpu,
-      rect,
+        mode,
+        cpu,
       });
       await gesture(cdp, rect, { speed: 1200, distance: 1200 });
       await reset(page);
@@ -220,6 +219,7 @@ try {
       const run = {
         mode,
         cpu,
+        rect,
         meta,
         input: {
           speed: 9000,
@@ -244,7 +244,7 @@ try {
       result.runs.push(run);
       await writeFile(`${out}/result.json`, JSON.stringify(result, null, 2));
       console.log(
-      `${mode} ${cpu}x visual: blank samples ${run.blankSamples}/${active.length}, complete first post-ack sample=${coverage[0].complete}`,
+        `${mode} ${cpu}x visual: blank samples ${run.blankSamples}/${active.length}, complete first post-ack sample=${coverage[0].complete}`,
       );
       await page.close();
     }

@@ -35,7 +35,7 @@ With the production preview running:
 pnpm check
 pnpm bench --cpu=1,4 --repeat=5 --out=artifacts/primary
 pnpm bench --cpu=6 --repeat=3 --out=artifacts/cpu6
-node scripts/visual.mjs
+VISUAL_OUT=artifacts/visual-published node scripts/visual.mjs
 ```
 
 `scripts/bench.mjs` uses Chromium mouse-source CDP scroll gestures. It verifies completed displacement, calibrates idle rAF intervals, and records each raw observation. Timing runs have no screencast or trace. Runs are sequential, with rotated/reversed A/B/C order. Do not run other browser checks or CPU-intensive tools simultaneously with the benchmark.
@@ -63,6 +63,8 @@ This tests synthetic renderers on Community, not a complete business application
 ## Publish to GitHub Pages
 
 The repository publishes prebuilt static files from its `gh-pages` branch, with `.nojekyll`. No application server or custom domain is required. Build locally, validate, and publish only the contents of `dist/`. The `main` branch contains source, protocol and reproducible evidence. The published manifest allows the tested and deployed source to be compared.
+
+After the sequential checks above, run `node scripts/assemble-results.mjs`. Review the results, update `public/results/acceptance.json` with the actual assessment, and build. Run `pnpm publish:pages` to check the source fingerprint against acceptance before pushing static files. Configure GitHub Pages to publish `gh-pages` at `/`, then run `BASE_URL=https://flanker.github.io/ag-grid-rendering-lab/ CHECK_OUT=artifacts/live-check pnpm check` and `node scripts/live-smoke.mjs`. Updating result text alone does not invalidate the renderer source fingerprint; changing the experiment source requires new relevant measurements.
 
 ## License
 
