@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-09-07T15:18:13.057Z",
+  "testedSourceSha256": "6a9d3993a84cac0d1cb6363ec9857790a5ec12ffd857079b8430a4df3f907f0a",
+  "testedBuild": "e69a3f5",
+  "mainRuns": 150,
+  "exploratoryRuns": 45,
+  "functionalAssertions": 48,
+  "visualCalibrationCases": 7,
+  "visualRuns": 9,
+  "allDisplacementsValid": true,
+  "browserErrors": 0,
+  "measurementToolsSha256": {
+    "scripts/bench.mjs": "7fa7121ab31af844b7465b89e19283ab1f65b5ecc5b254a182f8ca695ce35d38",
+    "scripts/visual.mjs": "fad1f0248bbc42654c9e65a74d0f4953d2b862f5460c09ae2a762ccfa33ce881",
+    "scripts/check.mjs": "e67833b24f102010616da975f066babbf3db0deadfae63c6954100130218549f",
+    "scripts/browser.mjs": "15569c879773c53d634272202d54c8c579cf30e42b7dd7c0b928e172868c502b",
+    "scripts/coverage.mjs": "3c60e496e47e963906544ce6a6281d0029ab1820894e340212b30417f06d300a"
+  },
+  "evidenceSha256": {
+    "primary/raw.json": "ad7da8bfa36ed10f8444f35ac816445f6988190a3c50dfff9bd93af073025a69",
+    "primary/summary.json": "352197cba1c640de5b9f964348e96bb93d51bae9b5bc3a45b832e1c40f5fa495",
+    "cpu6/raw.json": "e4a382a24467127f07f7607c3c106928a0cdb47a28ee15825850b25587996bc3",
+    "cpu6/summary.json": "1fd69186524b91546ce5d2c628c2f1d8cc69e91dfd83b48aa0e7571698936d18",
+    "visual/result.json": "da5ce7afea0bc597c9d2de48a6c066d8752e44d6d9e98d38e590bc39fb289463",
+    "check/result.json": "a9380bce9647e4488e4b96bdc439bbce130f8cc39d9aa9685b37039869aef1fb"
+  }
+}

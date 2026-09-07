@@ -1,0 +1,522 @@
+{
+  "source": "raw.json",
+  "summary": [
+    {
+      "cpu": 6,
+      "scenario": "read",
+      "mode": "react",
+      "n": 3,
+      "p95Median": 26.5,
+      "p95Min": 26.199999999999818,
+      "p95Max": 26.5,
+      "p95Samples": [
+        26.5,
+        26.5,
+        26.199999999999818
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        94,
+        97,
+        85
+      ],
+      "intervalsTotal": [
+        175,
+        169,
+        183
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "read",
+      "mode": "dom-cells",
+      "n": 3,
+      "p95Median": 26.5,
+      "p95Min": 25.800000000000182,
+      "p95Max": 31.599999999999454,
+      "p95Samples": [
+        26.5,
+        25.800000000000182,
+        31.599999999999454
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        99,
+        102,
+        102
+      ],
+      "intervalsTotal": [
+        173,
+        182,
+        167
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "read",
+      "mode": "dom-rows",
+      "n": 3,
+      "p95Median": 25.300000000000182,
+      "p95Min": 25.299999999999272,
+      "p95Max": 25.699999999999818,
+      "p95Samples": [
+        25.300000000000182,
+        25.299999999999272,
+        25.699999999999818
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        87,
+        87,
+        84
+      ],
+      "intervalsTotal": [
+        201,
+        199,
+        197
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "wheel",
+      "mode": "react",
+      "n": 3,
+      "p95Median": 42.600000000000364,
+      "p95Min": 42.5,
+      "p95Max": 42.80000000000018,
+      "p95Samples": [
+        42.5,
+        42.600000000000364,
+        42.80000000000018
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        92,
+        92,
+        93
+      ],
+      "intervalsTotal": [
+        99,
+        98,
+        97
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "wheel",
+      "mode": "dom-cells",
+      "n": 3,
+      "p95Median": 43.100000000000364,
+      "p95Min": 42.19999999999982,
+      "p95Max": 43.69999999999891,
+      "p95Samples": [
+        43.100000000000364,
+        42.19999999999982,
+        43.69999999999891
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 1,
+      "intervalsAbove2xIdle": [
+        87,
+        90,
+        90
+      ],
+      "intervalsTotal": [
+        91,
+        95,
+        96
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "wheel",
+      "mode": "dom-rows",
+      "n": 3,
+      "p95Median": 41.30000000000109,
+      "p95Min": 40.20000000000073,
+      "p95Max": 42.19999999999982,
+      "p95Samples": [
+        42.19999999999982,
+        40.20000000000073,
+        41.30000000000109
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        98,
+        103,
+        98
+      ],
+      "intervalsTotal": [
+        105,
+        110,
+        106
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling",
+      "mode": "react",
+      "n": 3,
+      "p95Median": 117.19999999999891,
+      "p95Min": 116.80000000000109,
+      "p95Max": 118.5,
+      "p95Samples": [
+        116.80000000000109,
+        117.19999999999891,
+        118.5
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 43,
+      "intervalsAbove2xIdle": [
+        16,
+        18,
+        17
+      ],
+      "intervalsTotal": [
+        21,
+        21,
+        21
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling",
+      "mode": "dom-cells",
+      "n": 3,
+      "p95Median": 124.29999999999927,
+      "p95Min": 124.29999999999927,
+      "p95Max": 125,
+      "p95Samples": [
+        124.29999999999927,
+        125,
+        124.29999999999927
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 44,
+      "intervalsAbove2xIdle": [
+        17,
+        16,
+        17
+      ],
+      "intervalsTotal": [
+        21,
+        21,
+        21
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling",
+      "mode": "dom-rows",
+      "n": 3,
+      "p95Median": 115.30000000000109,
+      "p95Min": 109.80000000000109,
+      "p95Max": 116.80000000000109,
+      "p95Samples": [
+        115.30000000000109,
+        109.80000000000109,
+        116.80000000000109
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 46,
+      "intervalsAbove2xIdle": [
+        17,
+        18,
+        18
+      ],
+      "intervalsTotal": [
+        22,
+        24,
+        22
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling-stop",
+      "mode": "react",
+      "n": 3,
+      "p95Median": 117.5,
+      "p95Min": 117.29999999999927,
+      "p95Max": 124.5,
+      "p95Samples": [
+        124.5,
+        117.5,
+        117.29999999999927
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 45,
+      "intervalsAbove2xIdle": [
+        17,
+        17,
+        17
+      ],
+      "intervalsTotal": [
+        21,
+        22,
+        22
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling-stop",
+      "mode": "dom-cells",
+      "n": 3,
+      "p95Median": 118.10000000000036,
+      "p95Min": 116.80000000000109,
+      "p95Max": 123.70000000000073,
+      "p95Samples": [
+        123.70000000000073,
+        116.80000000000109,
+        118.10000000000036
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 42,
+      "intervalsAbove2xIdle": [
+        17,
+        18,
+        17
+      ],
+      "intervalsTotal": [
+        22,
+        21,
+        21
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling-stop",
+      "mode": "dom-rows",
+      "n": 3,
+      "p95Median": 115.60000000000036,
+      "p95Min": 109.10000000000036,
+      "p95Max": 118.19999999999891,
+      "p95Samples": [
+        109.10000000000036,
+        118.19999999999891,
+        115.60000000000036
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 48,
+      "intervalsAbove2xIdle": [
+        18,
+        18,
+        18
+      ],
+      "intervalsTotal": [
+        23,
+        24,
+        23
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "hscroll",
+      "mode": "react",
+      "n": 3,
+      "p95Median": 26.299999999999272,
+      "p95Min": 25.69999999999891,
+      "p95Max": 26.399999999997817,
+      "p95Samples": [
+        26.299999999999272,
+        25.69999999999891,
+        26.399999999997817
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        33,
+        41,
+        34
+      ],
+      "intervalsTotal": [
+        171,
+        168,
+        166
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "hscroll",
+      "mode": "dom-cells",
+      "n": 3,
+      "p95Median": 33.29999999999927,
+      "p95Min": 25.799999999999272,
+      "p95Max": 33.29999999999927,
+      "p95Samples": [
+        33.29999999999927,
+        33.29999999999927,
+        25.799999999999272
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        44,
+        40,
+        40
+      ],
+      "intervalsTotal": [
+        157,
+        157,
+        165
+      ]
+    },
+    {
+      "cpu": 6,
+      "scenario": "hscroll",
+      "mode": "dom-rows",
+      "n": 3,
+      "p95Median": 26,
+      "p95Min": 25.099999999998545,
+      "p95Max": 26.399999999997817,
+      "p95Samples": [
+        26,
+        25.099999999998545,
+        26.399999999997817
+      ],
+      "medianIdle": 8.300000000000182,
+      "longTasksTotal": 0,
+      "intervalsAbove2xIdle": [
+        36,
+        34,
+        38
+      ],
+      "intervalsTotal": [
+        167,
+        172,
+        172
+      ]
+    }
+  ],
+  "paired": [
+    {
+      "cpu": 6,
+      "scenario": "read",
+      "comparisons": [
+        {
+          "block": 0,
+          "domCellsMinusReactMs": 0,
+          "domRowsMinusDomCellsMs": -1.199999999999818,
+          "domRowsMinusReactMs": -1.199999999999818
+        },
+        {
+          "block": 1,
+          "domCellsMinusReactMs": -0.6999999999998181,
+          "domRowsMinusDomCellsMs": -0.5000000000009095,
+          "domRowsMinusReactMs": -1.2000000000007276
+        },
+        {
+          "block": 2,
+          "domCellsMinusReactMs": 5.399999999999636,
+          "domRowsMinusDomCellsMs": -5.899999999999636,
+          "domRowsMinusReactMs": -0.5
+        }
+      ],
+      "meaning": "Negative means lower p95 in the second implementation; paired blocks, not proof of general significance"
+    },
+    {
+      "cpu": 6,
+      "scenario": "wheel",
+      "comparisons": [
+        {
+          "block": 0,
+          "domCellsMinusReactMs": 0.6000000000003638,
+          "domRowsMinusDomCellsMs": -0.9000000000005457,
+          "domRowsMinusReactMs": -0.3000000000001819
+        },
+        {
+          "block": 1,
+          "domCellsMinusReactMs": -0.4000000000005457,
+          "domRowsMinusDomCellsMs": -1.9999999999990905,
+          "domRowsMinusReactMs": -2.399999999999636
+        },
+        {
+          "block": 2,
+          "domCellsMinusReactMs": 0.8999999999987267,
+          "domRowsMinusDomCellsMs": -2.399999999997817,
+          "domRowsMinusReactMs": -1.4999999999990905
+        }
+      ],
+      "meaning": "Negative means lower p95 in the second implementation; paired blocks, not proof of general significance"
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling",
+      "comparisons": [
+        {
+          "block": 0,
+          "domCellsMinusReactMs": 7.499999999998181,
+          "domRowsMinusDomCellsMs": -8.999999999998181,
+          "domRowsMinusReactMs": -1.5
+        },
+        {
+          "block": 1,
+          "domCellsMinusReactMs": 7.800000000001091,
+          "domRowsMinusDomCellsMs": -15.199999999998909,
+          "domRowsMinusReactMs": -7.399999999997817
+        },
+        {
+          "block": 2,
+          "domCellsMinusReactMs": 5.799999999999272,
+          "domRowsMinusDomCellsMs": -7.499999999998181,
+          "domRowsMinusReactMs": -1.6999999999989086
+        }
+      ],
+      "meaning": "Negative means lower p95 in the second implementation; paired blocks, not proof of general significance"
+    },
+    {
+      "cpu": 6,
+      "scenario": "fling-stop",
+      "comparisons": [
+        {
+          "block": 0,
+          "domCellsMinusReactMs": -0.7999999999992724,
+          "domRowsMinusDomCellsMs": -14.600000000000364,
+          "domRowsMinusReactMs": -15.399999999999636
+        },
+        {
+          "block": 1,
+          "domCellsMinusReactMs": -0.6999999999989086,
+          "domRowsMinusDomCellsMs": 1.3999999999978172,
+          "domRowsMinusReactMs": 0.6999999999989086
+        },
+        {
+          "block": 2,
+          "domCellsMinusReactMs": 0.8000000000010914,
+          "domRowsMinusDomCellsMs": -2.5,
+          "domRowsMinusReactMs": -1.6999999999989086
+        }
+      ],
+      "meaning": "Negative means lower p95 in the second implementation; paired blocks, not proof of general significance"
+    },
+    {
+      "cpu": 6,
+      "scenario": "hscroll",
+      "comparisons": [
+        {
+          "block": 0,
+          "domCellsMinusReactMs": 7,
+          "domRowsMinusDomCellsMs": -7.299999999999272,
+          "domRowsMinusReactMs": -0.2999999999992724
+        },
+        {
+          "block": 1,
+          "domCellsMinusReactMs": 7.600000000000364,
+          "domRowsMinusDomCellsMs": -8.200000000000728,
+          "domRowsMinusReactMs": -0.6000000000003638
+        },
+        {
+          "block": 2,
+          "domCellsMinusReactMs": -0.5999999999985448,
+          "domRowsMinusDomCellsMs": 0.5999999999985448,
+          "domRowsMinusReactMs": 0
+        }
+      ],
+      "meaning": "Negative means lower p95 in the second implementation; paired blocks, not proof of general significance"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "sourceSha256": "6a9d3993a84cac0d1cb6363ec9857790a5ec12ffd857079b8430a4df3f907f0a",
+  "installedVersions": {
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "ag-grid-community": "36.0.2",
+    "ag-grid-react": "36.0.2"
+  },
+  "versions": {
+    "react": "19.2.1",
+    "reactDom": "19.2.1",
+    "agGridCommunity": "36.0.2",
+    "agGridReact": "36.0.2"
+  },
+  "revision": "2f1cda4",
+  "bridgeSha256": "0af7ab0cb8ddf17943957d1ddd0714efc6d66ac7130694112ee87274dcd6d871",
+  "lockfileSha256": "1b4e2294c61be8dc56723264c3923d8ceed608d6377979c63cdc1d5934f0bfbd",
+  "bridge": "Export upstream native RowComp; reuse it in the React row container only when context.vanillaRows is true. Scheduling unchanged.",
+  "sources": {
+    "react": {
+      "upstreamSha256": "de9447869a21c1c277b2c16c4a3745fe694d1f52d9abc7b983fb41385ebca5f8",
+      "transformedSha256": "294ec6b6e0c42cdbb9b049830472e4c24045f7bbb3af81d7dc7f731fce83c9e2"
+    },
+    "community": {
+      "upstreamSha256": "6f2f50e7472a0b52418d4289affb28ca22ec1a4ec92cf6a6fb3ef06cb2d78ba0",
+      "transformedSha256": "77292d538af2e64c18f2b0b6215c4f1692057a70901817a27952af2e5eacdc56"
+    }
+  }
+}
