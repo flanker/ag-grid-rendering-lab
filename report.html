@@ -11,6 +11,7 @@
 <h2>独立画面诊断</h2><p>受控快速 wheel 手势：9000 px/s，13500 px，关闭额外惯性。单独采集合成器截图，统计命令执行窗口内的画面样本。此处为每条件一次诊断，不能作为多次配对性能统计。</p><div class="table-wrap"><table><thead><tr><th>CPU</th><th>页面</th><th>大面积空白样本 / 活跃样本</th><th>最终可见内容</th></tr></thead><tbody id="visual"></tbody></table></div><div class="evidence" id="evidence"></div><p class="note">检测器先用正常丰富字段、稀疏文本、隐藏内容、错误文本、缺失节点、隐藏祖先和移出视口校准。骨架不算正确内容。截图不是每一个显示帧；首次观测即完整也不意味着恢复耗时为零。</p>
 <h2>验收与可复现性</h2><p id="acceptance">验收记录加载中。</p><p id="environment"></p><p id="fingerprint" class="note"></p><div class="links"><a href="./results/primary/raw.json">主测试原始记录 JSON ↓</a><a href="./results/primary/summary.json">汇总与配对差值 ↓</a><a href="./results/cpu6/raw.json">6× 探索记录 ↓</a><a href="./results/visual/result.json">画面诊断与校准 ↓</a><a href="./build-manifest.json">构建清单 ↓</a></div>
 <div class="links"><a href="./results/acceptance.json">独立验收记录 ↓</a><a href="./results/verification.json">证据文件摘要 ↓</a><a href="./results/check/result.json">功能检查明细 ↓</a></div>
+<div class="links"><a href="./results/live/result.json">线上交互与报告验收 ↓</a><a href="./results/live-check/result.json">线上功能回归明细 ↓</a></div>
 <details><summary>本地复现命令</summary><pre>pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
 pnpm build
